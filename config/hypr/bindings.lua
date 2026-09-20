@@ -46,3 +46,11 @@ o.bind("SUPER + W", "Toggle window floating/tiling", hl.dsp.window.float({ actio
 -- Move close-window from the old SUPER + W binding to SUPER + Q.
 hl.unbind("SUPER + Q")
 o.bind("SUPER + Q", "Close window", hl.dsp.window.close())
+
+-- Move horizontal focus from arrow keys to SUPER + A/D.
+hl.unbind("SUPER + LEFT")
+hl.unbind("SUPER + RIGHT")
+hl.unbind("SUPER + A")
+hl.unbind("SUPER + D")
+o.bind("SUPER + A", "Focus on left window", hl.dsp.focus({ direction = "l" }))
+o.bind("SUPER + D", "Focus on right window", hl.dsp.focus({ direction = "r" }))

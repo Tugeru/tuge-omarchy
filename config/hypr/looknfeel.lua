@@ -48,3 +48,10 @@
 --     column_width = 0.97,
 --   },
 -- })
+
+-- Keep scrolling focus at the workspace edges instead of wrapping around.
+hl.config({
+  scrolling = {
+    wrap_focus = false,
+  },
+})

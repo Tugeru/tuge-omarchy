@@ -33,3 +33,12 @@ hl.unbind("SUPER + F")
 hl.unbind("SUPER + ALT + F")
 o.bind("SUPER + F", "Full width", hl.dsp.window.fullscreen({ mode = "maximized" }))
 o.bind("SUPER + ALT + F", "Full screen", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
+
+-- Move the terminal, Omarchy menu, and floating/tiling bindings.
+hl.unbind("SUPER + T")
+hl.unbind("SUPER + RETURN")
+hl.unbind("SUPER + SPACE")
+hl.unbind("SUPER + W")
+o.bind("SUPER + T", "Terminal", { omarchy = "terminal" })
+o.bind("SUPER + RETURN", "Omarchy menu", "omarchy-menu toggle")
+o.bind("SUPER + W", "Toggle window floating/tiling", hl.dsp.window.float({ action = "toggle" }))

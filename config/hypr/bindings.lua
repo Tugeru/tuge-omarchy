@@ -42,3 +42,7 @@ hl.unbind("SUPER + W")
 o.bind("SUPER + T", "Terminal", { omarchy = "terminal" })
 o.bind("SUPER + RETURN", "Omarchy menu", "omarchy-menu toggle")
 o.bind("SUPER + W", "Toggle window floating/tiling", hl.dsp.window.float({ action = "toggle" }))
+
+-- Move close-window from the old SUPER + W binding to SUPER + Q.
+hl.unbind("SUPER + Q")
+o.bind("SUPER + Q", "Close window", hl.dsp.window.close())

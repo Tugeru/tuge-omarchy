@@ -1,0 +1,8 @@
+# Omarchy and local editor backups
+*.bak.*
+*.swp
+*.swo
+*~
+
+# OS/editor noise
+.DS_Store

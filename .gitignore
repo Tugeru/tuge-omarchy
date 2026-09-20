@@ -6,3 +6,10 @@
 
 # OS/editor noise
 .DS_Store
+
+# Herdr runtime state (the directory itself remains managed).
+/config/herdr/*.log
+/config/herdr/*.sock
+/config/herdr/session.json
+/config/herdr/release-notes.json
+/config/herdr/.plugins.lock

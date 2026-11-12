@@ -48,7 +48,6 @@ managed_paths=(
   'omarchy/shell.toml'
   'omarchy/extensions'
   'omarchy/hooks'
-  'omarchy/plugins'
   'omarchy/themes'
   'alacritty'
   'foot'

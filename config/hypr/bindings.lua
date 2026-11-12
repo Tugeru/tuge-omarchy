@@ -34,6 +34,14 @@ hl.unbind("SUPER + ALT + F")
 o.bind("SUPER + F", "Full width", hl.dsp.window.fullscreen({ mode = "maximized" }))
 o.bind("SUPER + ALT + F", "Full screen", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
 
+-- Move browser launch from SUPER + SHIFT + RETURN to SUPER + B.
+hl.unbind("SUPER + SHIFT + RETURN")
+o.bind("SUPER + B", "Browser", { omarchy = "browser" })
+
+-- Move file manager launch from SUPER + SHIFT + F to SUPER + E.
+hl.unbind("SUPER + SHIFT + F")
+o.bind("SUPER + E", "File manager", { omarchy = "nautilus" })
+
 -- Move the terminal, Omarchy menu, and floating/tiling bindings.
 hl.unbind("SUPER + T")
 hl.unbind("SUPER + RETURN")
@@ -54,3 +62,9 @@ hl.unbind("SUPER + A")
 hl.unbind("SUPER + D")
 o.bind("SUPER + A", "Focus on left window", hl.dsp.layout("focus l"))
 o.bind("SUPER + D", "Focus on right window", hl.dsp.layout("focus r"))
+
+-- Use SUPER + SHIFT + A/D to swap the window to the left/right.
+hl.unbind("SUPER + SHIFT + A")
+hl.unbind("SUPER + SHIFT + D")
+o.bind("SUPER + SHIFT + A", "Swap window to the left", hl.dsp.window.swap({ direction = "l" }))
+o.bind("SUPER + SHIFT + D", "Swap window to the right", hl.dsp.window.swap({ direction = "r" }))

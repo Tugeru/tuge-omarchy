@@ -27,3 +27,24 @@ require("default.hypr.toggles")
 
 -- Add any other personal Hyprland configuration below.
 -- o.window("qemu", { workspace = "5" })
+-- Include Flatpak exports when the shell indexes installed desktop entries.
+local data_home = os.getenv("XDG_DATA_HOME")
+if not data_home or data_home == "" then
+  data_home = (os.getenv("HOME") or "") .. "/.local/share"
+end
+
+local data_dirs = os.getenv("XDG_DATA_DIRS")
+if not data_dirs or data_dirs == "" then
+  data_dirs = "/usr/local/share:/usr/share"
+end
+
+for _, flatpak_dir in ipairs({
+  data_home .. "/flatpak/exports/share",
+  "/var/lib/flatpak/exports/share",
+}) do
+  if not data_dirs:find(flatpak_dir, 1, true) then
+    data_dirs = flatpak_dir .. ":" .. data_dirs
+  end
+end
+hl.env("XDG_DATA_DIRS", data_dirs)
+pcall(require, "/home/tuge/.config/hypr/openwhispr-binds.lua")

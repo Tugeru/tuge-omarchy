@@ -49,6 +49,8 @@ hl.config({
   input = {
     kb_options = "",
     numlock_by_default = false,
+    -- Disable mouse acceleration (pointer precision).
+    accel_profile = "flat",
     touchpad = {
       -- Scroll in the same direction as a phone screen.
       natural_scroll = true,

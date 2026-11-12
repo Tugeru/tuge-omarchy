@@ -1,0 +1,9 @@
+[submodule "black_arch"]
+	path = config/omarchy/themes/black_arch
+	url = https://github.com/ankur311sudo/black_arch.git
+[submodule "catppuccin-dark"]
+	path = config/omarchy/themes/catppuccin-dark
+	url = https://github.com/Luquatic/omarchy-catppuccin-dark.git
+[submodule "outpost"]
+	path = config/omarchy/themes/outpost
+	url = https://github.com/simoz/omarchy-outpost-theme
